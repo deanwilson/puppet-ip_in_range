@@ -1,0 +1,5 @@
+fixtures:
+  repositories:
+    stdlib: 'git://github.com/puppetlabs/puppetlabs-stdlib.git'
+  symlinks:
+    ip_in_range: "#{source_dir}"
