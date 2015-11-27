@@ -18,3 +18,7 @@ or using the check as part of a conditional -
     }
 
 It has a dependency on puppetlabs-stdlib to work.
+
+### License ###
+
+Apache 2.0 - [Dean Wilson](http://www.unixdaemon.net)
