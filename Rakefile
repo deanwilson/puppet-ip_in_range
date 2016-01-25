@@ -1,6 +1,7 @@
 require 'rake'
 require 'rspec/core/rake_task'
 require 'puppetlabs_spec_helper/rake_tasks'
+require 'rubocop/rake_task'
 
 desc "Run all RSpec code examples"
 RSpec::Core::RakeTask.new(:rspec) do |t|
@@ -27,3 +28,5 @@ begin
   end
 rescue Gem::LoadError
 end
+
+RuboCop::RakeTask.new
