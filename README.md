@@ -22,6 +22,12 @@ or using the check as part of a conditional -
 
 It has a dependency on puppetlabs-stdlib to work.
 
+## Installation
+
+You can install this module from [PuppetForge](https://forge.puppet.com/):
+
+    puppet module install deanwilson-ip_in_range
+
 ### License ###
 
 Apache 2.0 - [Dean Wilson](http://www.unixdaemon.net)
