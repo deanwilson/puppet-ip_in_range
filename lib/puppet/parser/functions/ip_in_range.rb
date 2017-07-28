@@ -25,6 +25,8 @@ module Puppet::Parser::Functions
       raise Puppet::ParseError, 'ip_in_range(): requires the puppetlabs-stdlib functions'
     end
 
+    args.flatten!
+
     args.each do |ipaddress|
       unless function_is_ip_address([ipaddress])
         error = 'is an invalid ip address'
@@ -35,12 +37,12 @@ module Puppet::Parser::Functions
     # Now we're done with the boilerplate do the actual check
 
     begin
-      ip    = IPAddr.new(args[0])
-      range = IPAddr.new(args[1])
+      ip    = IPAddr.new(args.shift)
+      ranges = args.map { |r| IPAddr.new(r) }
     rescue ArgumentError => e
       raise ArgumentError, "ip_in_range(): #{e}"
     end
 
-    return range.include?(ip)
+    ranges.any? { |range| range.include?(ip) }
   end
 end
