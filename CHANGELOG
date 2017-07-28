@@ -1,0 +1,6 @@
+2017-07-28  Dean Wilson <dean.wilson@gmail.com>
+
+    * You can now pass an array of ranges as the second argument.
+      If the IP address is present in any of them `true` is returned.
+      https://github.com/deanwilson/puppet-ip_in_range/pull/8
+

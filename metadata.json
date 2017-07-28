@@ -1,6 +1,6 @@
 {
   "name": "deanwilson-ip_in_range",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "deanwilson",
   "summary": "A Puppet function to determine if an IPv4 address is within the given IPv4 CIDR",
   "license": "Apache-2.0",
