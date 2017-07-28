@@ -7,6 +7,11 @@ describe 'ip_in_range' do
     should run.with_params('192.168.100.12', '192.168.100.0/24').and_return(true)
   end
 
+  it 'should return true when the ip is contained in an array of ranges' do
+    ranges = ['10.10.10.10/24', '192.168.100.0/24']
+    should run.with_params('192.168.100.12', ranges).and_return(true)
+  end
+
   it 'should return false when an ip is not in the range' do
     should run.with_params('10.10.10.10', '192.168.100.0/24').and_return(false)
   end
