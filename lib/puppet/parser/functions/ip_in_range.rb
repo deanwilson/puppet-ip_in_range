@@ -44,7 +44,7 @@ module Puppet::Parser::Functions
     # Now we're done with the boilerplate do the actual check
 
     begin
-      ip    = IPAddr.new(args.shift)
+      ip = IPAddr.new(args.shift)
       # anything that isn't the IP is a range to compare it against
       ranges = args.map { |r| IPAddr.new(r) }
     rescue ArgumentError => e
