@@ -1,6 +1,21 @@
-2017-07-28  Dean Wilson <dean.wilson@gmail.com>
+# Changelog
 
-    * You can now pass an array of ranges as the second argument.
-      If the IP address is present in any of them `true` is returned.
-      https://github.com/deanwilson/puppet-ip_in_range/pull/8
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [0.0.6] 2020-01-04 Dean Wilson <dean.wilson@gmail.com>
+
+### Changed
+- Loosened stdlib version to allow v6 thanks to PR#16 from @ltning
+- Closes issue #15
+
+
+## [Before changelog] 2017-07-28  Dean Wilson <dean.wilson@gmail.com>
+
+### Added
+- You can now pass an array of ranges as the second argument.
+  If the IP address is present in any of them `true` is returned.
+  https://github.com/deanwilson/puppet-ip_in_range/pull/8
 
