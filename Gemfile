@@ -1,4 +1,3 @@
-#!ruby
 source 'https://rubygems.org'
 
 group :development, :test do
@@ -9,7 +8,7 @@ group :development, :test do
 end
 
 if puppetversion = ENV['PUPPET_GEM_VERSION']
-  gem 'puppet', puppetversion, :require => false
+  gem 'puppet', puppetversion, require: false
 else
-  gem 'puppet', :require => false
+  gem 'puppet', require: false
 end

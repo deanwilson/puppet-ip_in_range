@@ -19,7 +19,7 @@ describe 'ip_in_range' do
   # Invalid function call tests
   #################################################
   it 'should throw an ArgumentError unless called with 2 arguments' do
-    is_expected.to run.with_params().and_raise_error(ArgumentError, /Wrong number/)
+    is_expected.to run.with_params.and_raise_error(ArgumentError, /Wrong number/)
   end
 
   it 'should throw an ArgumentError with an invalid ip address' do
