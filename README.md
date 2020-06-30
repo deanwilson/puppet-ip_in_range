@@ -1,5 +1,4 @@
-puppet-ip_in_range
-==================
+# puppet-ip_in_range
 
 [![Build Status](https://travis-ci.org/deanwilson/puppet-ip_in_range.svg?branch=master)](https://travis-ci.org/deanwilson/puppet-ip_in_range)
 [![Puppet Forge](https://img.shields.io/puppetforge/v/deanwilson/ip_in_range.svg)](https://forge.puppetlabs.com/deanwilson/ip_in_range)
@@ -26,7 +25,7 @@ or using the check as part of a conditional -
       notify { 'Do subnet based resources here': }
     }
 
-It has a dependency on puppetlabs-stdlib to work.
+This module has a dependency on `puppetlabs-stdlib`.
 
 ## Installation
 
@@ -36,4 +35,4 @@ You can install this module from [PuppetForge](https://forge.puppet.com/):
 
 ### License ###
 
-Apache 2.0 - [Dean Wilson](http://www.unixdaemon.net)
+Apache 2.0 - [Dean Wilson](https://www.unixdaemon.net)
