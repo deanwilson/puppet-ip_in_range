@@ -33,6 +33,6 @@ You can install this module from [PuppetForge](https://forge.puppet.com/):
 
     puppet module install deanwilson-ip_in_range
 
-### License ###
+### License
 
 Apache 2.0 - [Dean Wilson](https://www.unixdaemon.net)
