@@ -1,4 +1,9 @@
 require 'rspec-puppet'
+
+RSpec.configure do |config|
+  config.mock_with :rspec
+end
+
 require 'puppetlabs_spec_helper/puppet_spec_helper'
 
 fixture_path = File.expand_path(File.join(__FILE__, '..', 'fixtures'))
