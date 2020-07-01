@@ -29,7 +29,12 @@ jobs:
         fail_level: 'fatal'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    - name: Lint Code Base
+
+  superlint:
+    runs-on: ubuntu-18.04
+    steps:
+    - name: SuperLint Code Base
       uses: docker://github/super-linter:v3
       env:
+        VALIDATE_ALL_CODEBASE: true
         DISABLE_ERRORS: true
