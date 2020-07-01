@@ -19,3 +19,9 @@ jobs:
         gem install bundler
         bundle install --jobs 4 --retry 3
         bundle exec rake spec
+
+  superlint:
+    runs-on: ubuntu-18.04
+    steps:
+    - name: SuperLint Code Base
+      uses: docker://github/super-linter:v3
