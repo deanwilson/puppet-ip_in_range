@@ -1,4 +1,17 @@
-LineLength:
+AllCops:
+  NewCops: enable
+
+Bundler/DuplicatedGem:
   Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Layout/LineLength:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  EnforcedStyle: 'compact'
+
 Style/FrozenStringLiteralComment:
   Enabled: false

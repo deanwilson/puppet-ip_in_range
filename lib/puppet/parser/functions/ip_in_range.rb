@@ -20,7 +20,6 @@ module Puppet::Parser::Functions
     }
 
     ") do |args|
-
     unless args.length == 2
       raise ArgumentError, "ip_in_range(): wrong number of arguments (#{args.length} must be 2)"
     end
