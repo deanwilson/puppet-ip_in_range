@@ -1,10 +1,33 @@
 ---
+env:
+  global:
+    - BUILD_START=$(date +%s)
+    - PUPPET_GEM_VERSION="~> 6.16.0"
+
+install:
+  - STEP_START=$(date +%s)
+  - STEP_SPAN_ID=$(echo install | sum | cut -f 1 -d \ )
+  - curl -L -o buildevents https://github.com/honeycombio/buildevents/releases/download/v0.4.10/buildevents-linux-amd64
+  - chmod 755 buildevents
+  - ./buildevents step $TRAVIS_BUILD_ID $STEP_SPAN_ID $STEP_START install
+
 language: ruby
 rvm:
   - 2.5.0
 bundler_args: --without development
-script: "bundle exec rake spec SPEC_OPTS='--format documentation'"
-env:
-  - PUPPET_GEM_VERSION="~> 6.16.0"
+
+script:
+  - STEP_START=$(date +%s)
+  - STEP_SPAN_ID=$(echo script | sum | cut -f 1 -d \ )
+  - ./buildevents cmd $TRAVIS_BUILD_ID $STEP_SPAN_ID install-gems -- bundle install
+  - ./buildevents cmd $TRAVIS_BUILD_ID $STEP_SPAN_ID spec-tests -- bundle exec rake spec SPEC_OPTS='--format documentation'
+  - ./buildevents step $TRAVIS_BUILD_ID $STEP_SPAN_ID $STEP_START script
+
 notifications:
   email: dean.wilson@gmail.com
+
+after_failure:
+  - ./buildevents build $TRAVIS_BUILD_ID $BUILD_START failure
+
+after_success:
+  - ./buildevents build $TRAVIS_BUILD_ID $BUILD_START success
