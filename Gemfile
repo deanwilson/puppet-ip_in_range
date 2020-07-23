@@ -4,6 +4,7 @@ group :development, :test do
   gem 'puppetlabs_spec_helper', '~> 2.15.0'
   gem 'rake', '~> 13.0.0'
   gem 'rspec', '~> 3.9.0'
+  gem 'rspec_honeycomb_formatter', '~> 0.2.1'
   gem 'rubocop', '~> 0.88.0', require: false
 end
 

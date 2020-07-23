@@ -33,6 +33,19 @@ You can install this module from [PuppetForge](https://forge.puppet.com/):
 
     puppet module install deanwilson-ip_in_range
 
+## Honeycomb RSpec Formatter
+
+This repository was used as a test case for the
+[rspec_honeycomb_formatter](https://github.com/puppetlabs/rspec_honeycomb_formatter).
+If you would like to send traces based on the output of your
+`bundle exec rake spec` to Honeycomb you'll need to configure a few environment variables.
+
+    export HONEYCOMB_DATASET=tests # free form text
+    export HONEYCOMB_SERVICE=rspec # free form text
+    export HONEYCOMB_WRITEKEY=${HONEYCOMB_API_KEY} # created on honeycomb account creation
+
+After running the specs you should see the output in the Honeycomb console.
+
 ### License
 
 Apache 2.0 - [Dean Wilson](https://www.unixdaemon.net)
