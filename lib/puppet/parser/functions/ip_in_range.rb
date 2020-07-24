@@ -20,9 +20,7 @@ module Puppet::Parser::Functions
     }
 
     ") do |args|
-    unless args.length == 2
-      raise ArgumentError, "ip_in_range(): wrong number of arguments (#{args.length} must be 2)"
-    end
+    raise ArgumentError, "ip_in_range(): wrong number of arguments (#{args.length} must be 2)" unless args.length == 2
 
     # load in the ip validation function from puppetlabs-stdlib
     unless Puppet::Parser::Functions.function('is_ip_address')

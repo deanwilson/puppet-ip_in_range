@@ -23,10 +23,10 @@ describe 'ip_in_range' do
   end
 
   it 'should throw an ArgumentError with an invalid ip address' do
-    is_expected.to run.with_params('300.2.3.4', '192.168.100.0/24').and_raise_error(ArgumentError, /invalid ip address/)
+    is_expected.to run.with_params('300.2.3.4', '192.168.100.0/24').and_raise_error(ArgumentError, /invalid ip/)
   end
 
   it 'Should throw an ArgumentError with an invalid CIDR range' do
-    is_expected.to run.with_params('192.168.100.12', '192.168.100.0/242').and_raise_error(ArgumentError, /invalid ip address/)
+    is_expected.to run.with_params('192.168.100.12', '192.168.100.0/242').and_raise_error(ArgumentError, /invalid ip/)
   end
 end

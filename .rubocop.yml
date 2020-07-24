@@ -8,7 +8,8 @@ Style/Documentation:
   Enabled: false
 
 Layout/LineLength:
-  Enabled: false
+  Enabled: true
+  Max: 120
 
 Style/ClassAndModuleChildren:
   EnforcedStyle: 'compact'
