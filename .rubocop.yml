@@ -22,3 +22,6 @@ Style/ClassAndModuleChildren:
 
 Style/FrozenStringLiteralComment:
   Enabled: false
+
+RSpec/ImplicitSubject:
+  Enabled: false
