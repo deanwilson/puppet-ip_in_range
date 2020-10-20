@@ -1,6 +1,6 @@
 # puppet-ip_in_range
 
-[![Build Status](https://travis-ci.org/deanwilson/puppet-ip_in_range.svg?branch=main)](https://travis-ci.org/deanwilson/puppet-ip_in_range)
+[![Actions Status](https://github.com/deanwilson/puppet-ip_in_range/workflows/Ruby/badge.svg)](https://github.com/deanwilson/puppet-ip_in_range/actions)
 [![Puppet Forge](https://img.shields.io/puppetforge/v/deanwilson/ip_in_range.svg)](https://forge.puppetlabs.com/deanwilson/ip_in_range)
 
 A Puppet function to determine if an IPv4 address is within the IPv4 CIDR
