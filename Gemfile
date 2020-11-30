@@ -6,7 +6,7 @@ group :development, :test do
   gem 'rspec', '~> 3.10.0'
   gem 'rubocop', '~> 0.93.1', require: false
   gem 'rubocop-rspec', '~> 1.44.1', require: false
-  gem 'simplecov', '~> 0.19.0'
+  gem 'simplecov', '~> 0.20.0'
 end
 
 if (puppetversion = ENV['PUPPET_GEM_VERSION'])
